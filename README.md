@@ -1,6 +1,6 @@
-# MachineLearningPlan
+This checklist can guide the Data scientist through Machine Learning projects.
 
-## Frame the Problem and Look at the Big Picture
+# Frame the Problem and Look at the Big Picture
 - Define the business objectives.
 - Identify Use cases.
 - Identify the current solutions/workarounds (if any).
@@ -13,7 +13,7 @@
 - List assumptions and risks.
 - Verify assumptions if possible.
 
-## Get the Data
+# Get the Data
 *Note: automate as much as possible so we can easily update data when needed.*
 - List the data we need and how much we need.
 - Find and document where we can get that data.
@@ -27,7 +27,7 @@
 - Validate the size and type of data (time series, sample, geographical, etc.).
 - Sample a test set and store it aside (to validate the model).
 
-## Explore the Data
+# Explore the Data
 *Note: SME are required to get insights for these steps.*
 - Create a subset copy of the data for exploration.
 - Create a Jupyter notebook to keep a record of your data exploration.
@@ -44,7 +44,7 @@
 - Identify extra data that would be useful.
 - Document what we have learned.
 
-## Prepare the Data
+# Prepare the Data
 * Notes:
 - We should always work on copies of the data (keep the original dataset intact).
 - We must write functions for all data transformations we apply, for these reasons:
