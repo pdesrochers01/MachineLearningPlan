@@ -39,33 +39,29 @@
   - Usefulness for the task
   - Type of distribution (Gaussian, uniform, logarithmic, etc.)
 - For supervised learning tasks, identify the target attribute(s).
-- Study the correlations between attributes.
-- Study how you would solve the problem manually.
-- Identify the promising transformations you may want to apply.
+- Analyze correlations between attributes.
+- Analyze how to solve the problem manually (if possible).
 - Identify extra data that would be useful.
-- Document what you have learned.
-Prepare the Data
-Notes:
-•	Work on copies of the data (keep the original dataset intact).
-•	Write functions for all data transformations you apply, for five reasons:
-o	So you can easily prepare the data the next time you get a fresh dataset
-o	So you can apply these transformations in future projects
-o	To clean and prepare the test set
-o	To clean and prepare new data instances once your solution is live
-o	To make it easy to treat your preparation choices as hyperparameters
-1. Data cleaning:
-•	Fix or remove outliers (optional).
-•	Fill in missing values (e.g., with zero, mean, median...) or drop their rows (or columns).
-2. Feature selection (optional):
-•	Drop the attributes that provide no useful information for the task.
-3. Feature engineering, where appropriate:
-•	Discretize continuous features.
-•	Decompose features (e.g., categorical, date/time, etc.)
-•	Add promising transformations of features (e.g., log(x), sqrt(x), x square, etc.)
-•	Aggregate features into promising new features.
+- Document what we have learned.
 
-4. Feature scaling:
-•	Standardize or normalize features.
+## Prepare the Data
+* Notes:
+- We should always work on copies of the data (keep the original dataset intact).
+- We must write functions for all data transformations we apply, for these reasons:
+  - So we can easily prepare the data the next time we get a fresh dataset
+  - So we can apply these transformations in future projects
+  - To clean and prepare the test set
+  - To clean and prepare new data instances once our solution is live
+  - To make it easy to treat our preparation choices as hyperparameters*
+- Data cleaning:
+  - Fix or remove outliers.
+  - Fill in missing values (e.g., with zero, mean, median, etc.) or drop their rows (or columns).
+  - Drop the attributes that provide no useful information for the task.
+- Feature engineering, where appropriate:
+  - Decompose features (e.g., categorical, date/time, etc.)
+  - Enhance features (e.g., log(x), sqrt(x), x square, etc.)
+  - Aggregate features into promising new features.
+  - Standardize or normalize features.
 
 Shortlist Promising Models
 Notes:
