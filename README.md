@@ -54,16 +54,16 @@ This checklist can guide Data scientist through Machine Learning projects.
   - To clean and prepare new data instances once our solution is live
   - To make it easy to treat our preparation choices as hyperparameters*
 1. Data cleaning:
-  - Fix or remove outliers.
-  - Fill in missing values (e.g., with zero, mean, median, etc.) or drop their rows (or columns).
-  - Drop the attributes that provide no useful information for the task.
+    - Fix or remove outliers.
+    - Fill in missing values (e.g., with zero, mean, median, etc.) or drop their rows (or columns).
+    - Drop the attributes that provide no useful information for the task.
 1. Feature engineering, where appropriate:
-  - Decompose features (e.g., categorical, date/time, etc.)
-  - Enhance features (e.g., log(x), sqrt(x), x square, etc.)
-  - Aggregate features into promising new features.
-  - Standardize or normalize features.
+    - Decompose features (e.g., categorical, date/time, etc.)
+    - Enhance features (e.g., log(x), sqrt(x), x square, etc.)
+    - Aggregate features into promising new features.
+    - Standardize or normalize features.
 
-Shortlist Promising Models
+# Shortlist Promising Models
 *Notes:*
 - If the data is huge, we should sample smaller training sets so we can train many different models in a reasonable time.
 - Automate these steps as much as possible.
