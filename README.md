@@ -13,7 +13,7 @@ This checklist can guide Data scientist through Machine Learning projects.
 1. List assumptions and risks.
 1. Verify assumptions if possible.
 
-# Data ingestion
+# Data Collection
 *Note: automate as much as possible so we can easily update data when needed.*
 1. List the data we need and how much we need.
 1. Find and document where we can get that data.
@@ -38,19 +38,17 @@ This checklist can guide Data scientist through Machine Learning projects.
 1. Identify extra data that would be useful.
 1. Document what we have learned.
 
-# Data transformation and validation (prepare the data)
+# Data Preparation
 *Notes: We should always work on copies of the data (keep the original dataset intact) and write functions for all data transformations*
-1. Data cleaning:
-    - Fix or remove outliers.
-    - Fill in missing values (e.g., with zero, mean, median, etc.) or drop their rows (or columns).
-    - Drop the attributes that provide no useful information for the task.
+1. Data cleaning: remove duplicates, correct errors, deal with missing values, normalization, data type conversions, etc.
 1. Feature engineering, where appropriate:
     - Decompose features (e.g., categorical, date/time, etc.)
     - Enhance features (e.g., log(x), sqrt(x), x square, etc.)
     - Aggregate features into promising new features.
     - Standardize or normalize features.
+1. Split into training and evaluation sets
 
-# Build the model
+# Build and train the model
 *Notes: If the data is huge, we should sample smaller training sets so we can train many different models in a reasonable time. Automate these steps as much as possible.*
 1. Shortlist promising models.
 1. Build the models.
@@ -63,11 +61,11 @@ This checklist can guide Data scientist through Machine Learning projects.
 1. Perform few more iterations of the previous steps.
 1. Shortlist the top three to five most promising models (prefer models that make different types of errors).
 
-# Fine-Tune the System and Training at scale
+# Hyperparameter Tuning and Training at scale
 *Notes: Use as much data as possible for this step, especially as you move toward the end of fine-tuning. Automate as much as possible.*
 1. Fine-tune the hyperparameters using cross-validation. Treat the data transformation choices as hyperparameters.
 1. Combine the best models to produce better performance than running them individually.
-1. Once we are confident about the final model, measure its performance on the test set to estimate the generalization error.
+1. Make prediction: Once we are confident about the final model, measure its performance on the test set to estimate the generalization error.
 1. Train the final model at scale.
 
 # Deployment
