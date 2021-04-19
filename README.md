@@ -1,51 +1,51 @@
 This checklist can guide Data scientist through Machine Learning projects.
 
 # Frame the Problem and Look at the Big Picture
-- Define the business objectives.
-- Identify Use cases.
-- Identify the current solutions/workarounds (if any).
-- Identify possible ML solutions (supervised/unsupervised, online/offline, etc.)
-- Identify KPI (aligned with the business objective).
-- Identify the minimum performance needed to reach the business objective.
-- Search for comparable problems (to reuse experience or tools).
-- Assign resources (find available expertise).
-- Identify how to solve the problem manually.
-- List assumptions and risks.
-- Verify assumptions if possible.
+1. Define the business objectives.
+1. Identify Use cases.
+1. Identify the current solutions/workarounds (if any).
+1. Identify possible ML solutions (supervised/unsupervised, online/offline, etc.)
+1. Identify KPI (aligned with the business objective).
+1. Identify the minimum performance needed to reach the business objective.
+1. Search for comparable problems (to reuse experience or tools).
+1. Assign resources (find available expertise).
+1. Identify how to solve the problem manually.
+1. List assumptions and risks.
+1. Verify assumptions if possible.
 
 # Get the Data
 *Note: automate as much as possible so we can easily update data when needed.*
-- List the data we need and how much we need.
-- Find and document where we can get that data.
-- Validate how much space it will take.
-- Check legal obligations and get access authorization if necessary.
-- Validate all access authorizations are working.
-- Create workspaces (with enough storage space).
-- Get the data.
-- Convert the data to a format we can easily manipulate (without changing the data itself).
-- Ensure sensitive information is deleted or protected (e.g., anonymized).
-- Validate the size and type of data (time series, sample, geographical, etc.).
-- Sample a test set and store it aside (to validate the model).
+1. List the data we need and how much we need.
+1. Find and document where we can get that data.
+1. Validate how much space it will take.
+1. Check legal obligations and get access authorization if necessary.
+1. Validate all access authorizations are working.
+1. Create workspaces (with enough storage space).
+1. Get the data.
+1. Convert the data to a format we can easily manipulate (without changing the data itself).
+1. Ensure sensitive information is deleted or protected (e.g., anonymized).
+1. Validate the size and type of data (time series, sample, geographical, etc.).
+1. Sample a test set and store it aside (to validate the model).
 
 # Explore the Data
 *Note: SME are required to get insights for these steps.*
-- Create a subset copy of the data for exploration.
-- Create a Jupyter notebook to keep a record of your data exploration.
-- Study each attribute and its characteristics:
+1. Create a subset copy of the data for exploration.
+1. Create a Jupyter notebook to keep a record of your data exploration.
+1. Study each attribute and its characteristics:
   - Name
   - Type (categorical, in/float, bounded/unbounded, text, structured, etc.)
   - % of missing values
   - Noisiness and type of noise (stochastic, outliers, rounding errors, etc.)
   - Usefulness for the task
   - Type of distribution (Gaussian, uniform, logarithmic, etc.)
-- For supervised learning tasks, identify the target attribute(s).
-- Analyze correlations between attributes.
-- Analyze how to solve the problem manually (if possible).
-- Identify extra data that would be useful.
-- Document what we have learned.
+1. For supervised learning tasks, identify the target attribute(s).
+1. Analyze correlations between attributes.
+1. Analyze how to solve the problem manually (if possible).
+1. Identify extra data that would be useful.
+1. Document what we have learned.
 
 # Prepare the Data
-* Notes:
+*Notes:*
 - We should always work on copies of the data (keep the original dataset intact).
 - We must write functions for all data transformations we apply, for these reasons:
   - So we can easily prepare the data the next time we get a fresh dataset
@@ -53,36 +53,29 @@ This checklist can guide Data scientist through Machine Learning projects.
   - To clean and prepare the test set
   - To clean and prepare new data instances once our solution is live
   - To make it easy to treat our preparation choices as hyperparameters*
-- Data cleaning:
+1. Data cleaning:
   - Fix or remove outliers.
   - Fill in missing values (e.g., with zero, mean, median, etc.) or drop their rows (or columns).
   - Drop the attributes that provide no useful information for the task.
-- Feature engineering, where appropriate:
+1. Feature engineering, where appropriate:
   - Decompose features (e.g., categorical, date/time, etc.)
   - Enhance features (e.g., log(x), sqrt(x), x square, etc.)
   - Aggregate features into promising new features.
   - Standardize or normalize features.
 
 Shortlist Promising Models
-Notes:
-•	If the data is huge, you may want to sample smaller training sets SO you can train many different models in a reasonable time (be aware that this penalizes complex models such as large neural nets or Random Forests).
-•	Once again, try to automate these steps as much as possible.
-
+*Notes:*
+- If the data is huge, we should sample smaller training sets so we can train many different models in a reasonable time.
+- Automate these steps as much as possible.
 1. Train many quick-and-dirty models from different categories (e.g., linear, naive Bayes, SVM, Random Forest, neural using standard parameters.
-
-2. Measure and compare their performance.
-•	For each model, use N-fold cross-validation and compute the mean and standard deviation of the performance measure on the N folds.
-
-3. Analyze the most significant variables for each algorithm.
-
-4. Analyze the types of errors the models make.
-•	What data would a human have used to avoid these errors?
-
-5. Perform a quick round of feature selection and engineering.
-
-6. Perform one or two more quick iterations of the five previous steps.
-
-7. Shortlist the top three to five most promising models, preferring models that make different types of errors.
+1. Measure and compare their performance.
+- For each model, use N-fold cross-validation and compute the mean and standard deviation of the performance measure on the N folds.
+1. Analyze the most significant variables for each algorithm.
+1. Analyze the types of errors the models make.
+- What data would a human have used to avoid these errors?
+1. Perform a quick round of feature selection and engineering.
+1. Perform one or two more quick iterations of the five previous steps.
+1. Shortlist the top three to five most promising models, preferring models that make different types of errors.
 
 Fine-Tune the System
 Notes:
