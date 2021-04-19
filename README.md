@@ -45,14 +45,7 @@ This checklist can guide Data scientist through Machine Learning projects.
 1. Document what we have learned.
 
 # Prepare the Data
-*Notes:*
-- We should always work on copies of the data (keep the original dataset intact).
-- We must write functions for all data transformations we apply, for these reasons:
-  - So we can easily prepare the data the next time we get a fresh dataset
-  - So we can apply these transformations in future projects
-  - To clean and prepare the test set
-  - To clean and prepare new data instances once our solution is live
-  - To make it easy to treat our preparation choices as hyperparameters*
+*Notes: We should always work on copies of the data (keep the original dataset intact) and write functions for all data transformations*
 1. Data cleaning:
     - Fix or remove outliers.
     - Fill in missing values (e.g., with zero, mean, median, etc.) or drop their rows (or columns).
@@ -64,9 +57,7 @@ This checklist can guide Data scientist through Machine Learning projects.
     - Standardize or normalize features.
 
 # Shortlist Promising Models
-*Notes:*
-- If the data is huge, we should sample smaller training sets so we can train many different models in a reasonable time.
-- Automate these steps as much as possible.
+*Notes: If the data is huge, we should sample smaller training sets so we can train many different models in a reasonable time. Automate these steps as much as possible.*
 1. Train different models.
 1. Measure and compare their performance.
 1. Analyze the most significant variables for each algorithm.
@@ -76,9 +67,7 @@ This checklist can guide Data scientist through Machine Learning projects.
 1. Shortlist the top three to five most promising models (prefer models that make different types of errors).
 
 # Fine-Tune the System
-*Notes:*
-- Use as much data as possible for this step, especially as you move toward the end of fine-tuning.
-- Automate what you can.
+*Notes: Use as much data as possible for this step, especially as you move toward the end of fine-tuning. Automate as much as possible.*
 1. Fine-tune the hyperparameters using cross-validation. Treat the data transformation choices as hyperparameters.
 1. Combine the best models to produce better performance than running them individually.
 1. Once we are confident about the final model, measure its performance on the test set to estimate the generalization error.
