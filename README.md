@@ -13,7 +13,7 @@ This checklist can guide Data scientist through Machine Learning projects.
 1. List assumptions and risks.
 1. Verify assumptions if possible.
 
-# Get the Data
+# Data ingestion
 *Note: automate as much as possible so we can easily update data when needed.*
 1. List the data we need and how much we need.
 1. Find and document where we can get that data.
@@ -27,24 +27,18 @@ This checklist can guide Data scientist through Machine Learning projects.
 1. Validate the size and type of data (time series, sample, geographical, etc.).
 1. Sample a test set and store it aside (to validate the model).
 
-# Explore the Data
+# Data analysis (explore the data)
 *Note: SME are required to get insights for these steps.*
 1. Create a subset copy of the data for exploration.
 1. Create a Jupyter notebook to keep a record of your data exploration.
-1. Study each attribute and its characteristics:
-  - Name
-  - Type (categorical, in/float, bounded/unbounded, text, structured, etc.)
-  - % of missing values
-  - Noisiness and type of noise (stochastic, outliers, rounding errors, etc.)
-  - Usefulness for the task
-  - Type of distribution (Gaussian, uniform, logarithmic, etc.)
-1. For supervised learning tasks, identify the target attribute(s).
+1. Study each attribute and its characteristics: name, type, % of missing values, noisiness and type of noise, usefulness for the task, type of distribution (Gaussian, uniform, logarithmic, etc.)
+1. For supervised learning tasks, identify the target attributes.
 1. Analyze correlations between attributes.
 1. Analyze how to solve the problem manually (if possible).
 1. Identify extra data that would be useful.
 1. Document what we have learned.
 
-# Prepare the Data
+# Data transformation and validation (prepare the data)
 *Notes: We should always work on copies of the data (keep the original dataset intact) and write functions for all data transformations*
 1. Data cleaning:
     - Fix or remove outliers.
@@ -56,31 +50,35 @@ This checklist can guide Data scientist through Machine Learning projects.
     - Aggregate features into promising new features.
     - Standardize or normalize features.
 
-# Shortlist Promising Models
+# Build the model
 *Notes: If the data is huge, we should sample smaller training sets so we can train many different models in a reasonable time. Automate these steps as much as possible.*
+1. Shortlist promising models.
+1. Build the models.
 1. Train different models.
-1. Measure and compare their performance.
-1. Analyze the most significant variables for each algorithm.
-1. Analyze the types of errors the models make.
-1. Perform a quick round of feature selection and engineering.
+1. Validate models:
+  - Measure and compare their performance.
+  - Analyze the most significant variables for each algorithm.
+  - Analyze the types of errors the models make.
+  - Perform a quick round of feature selection and engineering.
 1. Perform few more iterations of the previous steps.
 1. Shortlist the top three to five most promising models (prefer models that make different types of errors).
 
-# Fine-Tune the System
+# Fine-Tune the System and Training at scale
 *Notes: Use as much data as possible for this step, especially as you move toward the end of fine-tuning. Automate as much as possible.*
 1. Fine-tune the hyperparameters using cross-validation. Treat the data transformation choices as hyperparameters.
 1. Combine the best models to produce better performance than running them individually.
 1. Once we are confident about the final model, measure its performance on the test set to estimate the generalization error.
+1. Train the final model at scale.
 
-# Present Your Solution
-1. Document what we have done.
-1. Create a presentation and make sure to highlight the big picture first.
-1. Explain why the solution achieves the business objective.
-1. Don't forget to present interesting points we noticed along the way (what worked and what did not and list assumptions and system's limitations).
-1. Ensure key findings are communicated through visualizations or easy-to-remember statements.
-
-# Launch
+# Deployment
 1. Get the solution ready for production (plug into production data inputs, write unit tests, etc.).
 1. Write monitoring code to check system's live performance at regular intervals and trigger alerts when it drops and beware of slow degradation (models tend to "rot" as data evolves).
 1. Monitor inputs' quality.
 1. Retrain models on a regular basis on fresh data (automate as much as possible
+
+# Present the Solution
+1. Document the model.
+1. Create a presentation and make sure to highlight the big picture first.
+1. Explain why the solution achieves the business objective.
+1. Present interesting points we noticed along the way (what worked and what did not and list assumptions and system's limitations).
+1. Ensure key findings are communicated through visualizations or easy-to-remember statements.
