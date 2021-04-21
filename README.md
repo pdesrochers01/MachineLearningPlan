@@ -54,10 +54,10 @@ This checklist can guide Data scientist through Machine Learning projects.
 1. Build the models.
 1. Train different models.
 1. Validate models:
-  - Measure and compare their performance.
-  - Analyze the most significant variables for each algorithm.
-  - Analyze the types of errors the models make.
-  - Perform a quick round of feature selection and engineering.
+    - Measure and compare their performance.
+    - Analyze the most significant variables for each algorithm.
+    - Analyze the types of errors the models make.
+    - Perform a quick round of feature selection and engineering.
 1. Perform few more iterations of the previous steps.
 1. Shortlist the top three to five most promising models (prefer models that make different types of errors).
 
@@ -72,11 +72,11 @@ This checklist can guide Data scientist through Machine Learning projects.
 1. Get the solution ready for production (plug into production data inputs, write unit tests, etc.).
 1. Write monitoring code to check system's live performance at regular intervals and trigger alerts when it drops and beware of slow degradation (models tend to "rot" as data evolves).
 1. Monitor inputs' quality.
-1. Retrain models on a regular basis on fresh data (automate as much as possible
+1. Retrain models on a regular basis on fresh data (automate as much as possible).
 
 # Present the Solution
-1. Document the model.
+1. Complete the documentation of the model.
 1. Create a presentation and make sure to highlight the big picture first.
-1. Explain why the solution achieves the business objective.
-1. Present interesting points we noticed along the way (what worked and what did not and list assumptions and system's limitations).
+1. Explain how the solution achieves the business objective.
+1. Present interesting points noticed along the way (what worked and what did not, assumptions, system's limitations, etc.).
 1. Ensure key findings are communicated through visualizations or easy-to-remember statements.
