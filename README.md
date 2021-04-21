@@ -1,4 +1,4 @@
-This checklist can guide Data scientist through Machine Learning projects.
+This plan (checklist) can guide Data scientists through their Machine Learning projects.
 
 # Frame the Problem and Look at the Big Picture
 1. Define the business objectives.
